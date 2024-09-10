@@ -61,7 +61,6 @@ const AppProvider = ({children}: AppProviderProps) => {
   };
 
   const handleSetTheme = (themeType: ThemeType) => {
-    console.log('themeType', themeType);
     setTheme(themeType);
     storeTheme(themeType);
   };
@@ -89,20 +88,6 @@ const AppProvider = ({children}: AppProviderProps) => {
       return newTodos;
     });
   };
-
-  // const deleteTodo = (id: number) => {
-  //   setTodos(prevState => {
-  //     const newTodos = [...prevState];
-
-  //     const selectedTodoIndex = newTodos.findIndex(todo => todo.id === id);
-
-  //     newTodos.splice(selectedTodoIndex, 1);
-
-  //     console.log('newTodos', newTodos);
-
-  //     return newTodos;
-  //   });
-  // };
 
   const handleLogout = () => {
     removeToken();

@@ -67,7 +67,6 @@ export const completeTodo = async (id: number, data: TodoFormData) => {
     const response = await client.put(`/todos/complete/${id}`, {
       isCompleted: data.isCompleted,
     });
-    console.log('completeTodo', response);
 
     return response.data as CompleteTodoResponse;
   } catch (error) {

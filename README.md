@@ -1,79 +1,71 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<div align='center'>
+    <img alt='React Native Todo List Logo' src='/src/assets/logo/logo.png' style='width:80px;height:80px;' />
+</div>
 
-# Getting Started
+# React Native Todo List (RNTodoList)
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Todo mobile app built with Typescript, React Native.
 
-## Step 1: Start the Metro Server
+## Figma Design
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- Presentation View (Prototype): [Jason Todo List's Prototype](https://www.figma.com/proto/dnRwbCMKbBE4yX5sqPA38z/Jason-Todo-List?node-id=6-2&node-type=canvas&t=664cINrl9uBSWrY6-1&scaling=scale-down&content-scaling=fixed&page-id=2%3A3&starting-point-node-id=6%3A2&show-proto-sidebar=1)
+- Dev Mode Link: [Jason Todo List's Dev Mode](https://www.figma.com/design/dnRwbCMKbBE4yX5sqPA38z/Jason-Todo-List?node-id=2-3&t=9SyEGpmqIBX8MDwP-1)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+<div style='display:grid;gap:16px 16px;grid-template-columns: auto auto;'>
+    <img src="/src/assets/figma/screen1.png">
+    <img src="/src/assets/figma/screen2.png">
+    <img src="/src/assets/figma/component1.png">
+    <img src="/src/assets/figma/component2.png">
+</div>
+
+## API Used In This Project
+
+- Node Sequelize Todo: [node-sequelize-todo](https://github.com/litojason/node-sequelize-todo)
+
+## Additional Dependencies
+
+Please refer to `package.json`.
+
+- [React Navigation](https://reactnavigation.org/): routing and navigation (Native Stack, Drawer)
+- [React Hook Form](https://react-hook-form.com/): manage forms
+- [yup](https://www.npmjs.com/package/yup): validation
+- [React Native Vector Icons](https://www.npmjs.com/package/react-native-vector-icons): customizable vector icons
+- [react-native-config](https://www.npmjs.com/package/react-native-config): handle config variables
+- [axios](https://www.npmjs.com/package/axios): promise based HTTP client
+
+## Installation
+
+    git clone https://github.com/litojason/RNTodoList.git
+
+    cd RNTodoList
+
+    yarn
+
+    yarn pod
+
+## Setup Env
+
+Create 2 (or more) new files: `.env.development`, `.env.production`. Please copy example below or refer to `.env.sample` file.
+
+    API_URL=https://sample.com
+    ENV=development
+
+## Run
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
+# Start
 yarn start
+
+## Open in other terminal after yarn start
+# Development environment
+# Android
+yarn android:dev
+# iOS
+yarn ios:dev
+
+# Production environment
+# Android
+yarn android:prod
+# iOS
+yarn ios:prod
 ```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
